@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{44FD6405-1966-4D3A-BF8D-4597ECFE09D9}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FirstApp/Resources/Resource.designer.cs">
+    <Files>
+      <File FileName="FirstApp/MainActivity.cs" Line="28" Column="41" />
+      <File FileName="FirstApp/Resources/values/Strings.xml" Line="6" Column="1" />
+      <File FileName="FirstApp/Resources/values/Colors.xml" Line="7" Column="13" />
+      <File FileName="FirstApp/Resources/Resource.designer.cs" Line="72" Column="38" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FirstApp AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
+  <MultiItemStartupConfigurations />
+</Properties>

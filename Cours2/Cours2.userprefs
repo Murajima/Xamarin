@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{CC0F1396-F047-4B50-87B9-C02A8B82F447}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cours2/Resources/values/Colors.xml">
+    <Files>
+      <File FileName="Cours2/UI/TodoAdapter.cs" Line="21" Column="29" />
+      <File FileName="Cours2/MainActivity.cs" Line="45" Column="40" />
+      <File FileName="Cours2/Resources/values/Colors.xml" Line="2" Column="11" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Cours2 AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
+  <MultiItemStartupConfigurations />
+</Properties>
