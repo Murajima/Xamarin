@@ -10,7 +10,7 @@ namespace JeuCarte
     public class MainActivity : Activity
     {
         private int defausseCpt = 0;
-        private int piocheCpt = 52;
+        private int piocheCpt = 54;
 
         private ListCards listCard;
         private Card selectedCard;
@@ -65,7 +65,7 @@ namespace JeuCarte
 
             shuffle.Click += delegate {
                 listCard = new ListCards();
-                piocheCpt = 52;
+                piocheCpt = 54;
                 defausseCpt = 0;
                 pioche.Text = piocheCpt.ToString();
                 defausse.Text = defausseCpt.ToString();
