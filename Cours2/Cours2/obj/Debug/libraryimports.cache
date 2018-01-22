@@ -8,6 +8,7 @@
     <ManifestDocument>obj/Debug/lp/6/jl/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/7/jl/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/8/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/8/jl/manifest/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/9/jl/AndroidManifest.xml</ManifestDocument>
   </ManifestDocuments>
   <NativeLibraries />

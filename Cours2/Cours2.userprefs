@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{CC0F1396-F047-4B50-87B9-C02A8B82F447}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Cours2/Resources/values/Colors.xml">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Cours2/UI/TodoAdapter.cs" Line="21" Column="29" />
-      <File FileName="Cours2/MainActivity.cs" Line="45" Column="40" />
-      <File FileName="Cours2/Resources/values/Colors.xml" Line="2" Column="11" />
+      <File FileName="Cours2/TodoActivity.cs" Line="31" Column="77" />
+      <File FileName="Cours2/MainActivity.cs" Line="63" Column="1" />
+      <File FileName="Cours2/Core/Todo.cs" Line="1" Column="1" />
+      <File FileName="Cours2/Resources/values/Strings.xml" Line="10" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

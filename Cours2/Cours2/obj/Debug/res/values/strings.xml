@@ -1,1 +1,1 @@
-<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">Cours2</string></resources>
+<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">Cours2</string><string name="operation_success">Success</string><string name="operation_failure">Failure</string><string name="priority_prompt">Choose a priority</string><string-array name="priority_array"><item>Bas</item><item>Normal</item><item>Haut</item></string-array></resources>

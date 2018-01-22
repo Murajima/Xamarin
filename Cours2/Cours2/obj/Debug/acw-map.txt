@@ -1,11 +1,11 @@
-App3.UI.TodoActivity, Cours2;md51780dc1c10f69b0a9571a258b4b097e0.TodoActivity
-App3.UI.TodoActivity, Cours2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md51780dc1c10f69b0a9571a258b4b097e0.TodoActivity
-App3.UI.TodoActivity;md51780dc1c10f69b0a9571a258b4b097e0.TodoActivity
-app3.ui.TodoActivity;md51780dc1c10f69b0a9571a258b4b097e0.TodoActivity
 Cours2.MainActivity, Cours2;md5dbb857dadff1204e50a8e1b555004f2c.MainActivity
 Cours2.MainActivity, Cours2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbb857dadff1204e50a8e1b555004f2c.MainActivity
 Cours2.MainActivity;md5dbb857dadff1204e50a8e1b555004f2c.MainActivity
 cours2.MainActivity;md5dbb857dadff1204e50a8e1b555004f2c.MainActivity
+Cours2.TodoActivity, Cours2;md5dbb857dadff1204e50a8e1b555004f2c.TodoActivity
+Cours2.TodoActivity, Cours2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5dbb857dadff1204e50a8e1b555004f2c.TodoActivity
+Cours2.TodoActivity;md5dbb857dadff1204e50a8e1b555004f2c.TodoActivity
+cours2.TodoActivity;md5dbb857dadff1204e50a8e1b555004f2c.TodoActivity
 Cours2.UI.TodoAdapter, Cours2;md5e13110fbfb41e891c357a0aa58d0506a.TodoAdapter
 Cours2.UI.TodoAdapter, Cours2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5e13110fbfb41e891c357a0aa58d0506a.TodoAdapter
 Cours2.UI.TodoAdapter;md5e13110fbfb41e891c357a0aa58d0506a.TodoAdapter

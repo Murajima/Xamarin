@@ -18,5 +18,10 @@ namespace Cours2.Core
         public string Nom { get; set; }
         public string Description { get; set; }
         public PrioriteEnum Priorite { get; set; }
+
+        public static explicit operator Bundle(Todo v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -46,6 +46,8 @@ namespace Cours2.UI
             return items[position];
         }
 
+        public override int Count => items.Count;
+
         public int GetItemPriorityColor (Todo item){
             switch(item.Priorite){
                 case Todo.PrioriteEnum.Bas:

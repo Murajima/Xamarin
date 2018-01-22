@@ -108,6 +108,7 @@
 /Users/antoinepoussard/Desktop/Workspace/Ynov/Xamarin/Cours2/Cours2/obj/Debug/res/mipmap-xxxhdpi/icon.png
 /Users/antoinepoussard/Desktop/Workspace/Ynov/Xamarin/Cours2/Cours2/obj/Debug/res/layout/item_todo.xml
 /Users/antoinepoussard/Desktop/Workspace/Ynov/Xamarin/Cours2/Cours2/obj/Debug/res/values/colors.xml
+/Users/antoinepoussard/Desktop/Workspace/Ynov/Xamarin/Cours2/Cours2/obj/Debug/res/layout/addtask.xml
 /Users/antoinepoussard/Desktop/Workspace/Ynov/Xamarin/Cours2/Cours2/obj/Debug/R.cs.flag
 /Users/antoinepoussard/Desktop/Workspace/Ynov/Xamarin/Cours2/Cours2/obj/Debug/uploadflags.txt
 bin/Debug/Mono.Android.pdb
