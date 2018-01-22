@@ -10,7 +10,7 @@ namespace Cours2.Core
         {
         }
         public string Nom { get; set; }
-        public string Descritption { get; set; }
+        public string Description { get; set; }
         public string enumDescription { get; set; }
 
         public void saveEnum(PrioriteEnum val)

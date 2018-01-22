@@ -7,6 +7,7 @@ using Cours2.Core;
 using Android;
 using Android.Content;
 using System;
+using Realms;
 
 namespace Cours2
 {
@@ -21,27 +22,38 @@ namespace Cours2
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            var realm = Realm.GetInstance();
             base.OnCreate(savedInstanceState);
+
+            realm.Write(() =>
+            {
+                var writeDB = realm.CreateObject("RealmDB", 1);
+                writeDB.Name = "TEST";
+                writeDB.Description = "TESTDESC";
+                writeDB.saveenum(PrioriteEnum.Haut);
+            });
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             listView = FindViewById<ListView>(Resource.Id.listView);
             ajouter = FindViewById<Button>(Resource.Id.ajouter);
-            todos = new List<Todo>{
-                new Todo
-                {
-                    Nom ="Manger", Description ="des pizzas par exemple !", Priorite =Todo.PrioriteEnum.Haut
-                },
-                new Todo
-                {
-                    Nom = "Boire des bieres", Description = "en boire beaucoup", Priorite = Todo.PrioriteEnum.Normal
-                },
-                new Todo
-                {
-                    Nom = "Faire des courses", Description = "pas beaucoup d'argent", Priorite = Todo.PrioriteEnum.Bas
-                }
+            var query = realm.All<RealmDB>();
+            todos = (System.Collections.Generic.List<Cours2.Core.Todo>)query;
+            //todos = new List<Todo>{
+            //    new Todo
+            //    {
+            //        Nom ="Manger", Description ="des pizzas par exemple !", Priorite =Todo.PrioriteEnum.Haut
+            //    },
+            //    new Todo
+            //    {
+            //        Nom = "Boire des bieres", Description = "en boire beaucoup", Priorite = Todo.PrioriteEnum.Normal
+            //    },
+            //    new Todo
+            //    {
+            //        Nom = "Faire des courses", Description = "pas beaucoup d'argent", Priorite = Todo.PrioriteEnum.Bas
+            //    }
 
-            };
+            //};
 
             adapter = new TodoAdapter(this, todos);
             listView.Adapter = adapter;

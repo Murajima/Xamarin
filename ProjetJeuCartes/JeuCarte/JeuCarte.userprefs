@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{B8B7026F-246A-4462-9330-6367164F85F0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="JeuCarte/Core/ListCards.cs">
+    <Files>
+      <File FileName="JeuCarte/Core/Card.cs" Line="14" Column="10" />
+      <File FileName="JeuCarte/MainActivity.cs" Line="28" Column="43" />
+      <File FileName="JeuCarte/Core/ListCards.cs" Line="6" Column="21" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.JeuCarte AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
