@@ -35,8 +35,10 @@ namespace JeuCarte
             value = FindViewById<TextView>(Resource.Id.value);
             color = FindViewById<TextView>(Resource.Id.color);
 
-            pioche.Text = piocheCpt.ToString();
-            defausse.Text = defausseCpt.ToString();
+            pioche.Text = "Pioche: " + piocheCpt.ToString();
+            defausse.Text = "Defausse: " + defausseCpt.ToString();
+            value.Text = " ";
+            color.Text = "Aucune carte selectionnee";
 
             listCard = new ListCards();
 
@@ -50,10 +52,10 @@ namespace JeuCarte
 
                     piocheCpt -= 1;
                     defausseCpt += 1;
-                    pioche.Text = piocheCpt.ToString();
-                    defausse.Text = defausseCpt.ToString();
-                    value.Text = selectedCard.value;
-                    color.Text = selectedCard.color;
+                    pioche.Text = "Pioche: " + piocheCpt.ToString();
+                    defausse.Text = "Defausse: " + defausseCpt.ToString();
+                    value.Text = "Valeur de la carte: " + selectedCard.value;
+                    color.Text =  "Couleur de la carte: " + selectedCard.color;
                 } else {
                     pioche.Text = piocheCpt.ToString();
                     defausse.Text = defausseCpt.ToString();
@@ -67,8 +69,10 @@ namespace JeuCarte
                 listCard = new ListCards();
                 piocheCpt = 54;
                 defausseCpt = 0;
-                pioche.Text = piocheCpt.ToString();
-                defausse.Text = defausseCpt.ToString();
+                pioche.Text = "Pioche: " + piocheCpt.ToString();
+                defausse.Text = "Defausse: " + defausseCpt.ToString();
+                value.Text = " ";
+                color.Text = "Aucune carte selectionnee";
             };
         }
     }
