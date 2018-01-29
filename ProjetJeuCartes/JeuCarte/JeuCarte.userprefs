@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{B8B7026F-246A-4462-9330-6367164F85F0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="JeuCarte/Core/ListCards.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="JeuCarte/MainActivity.cs">
     <Files>
-      <File FileName="JeuCarte/Core/Card.cs" Line="14" Column="10" />
-      <File FileName="JeuCarte/MainActivity.cs" Line="28" Column="43" />
-      <File FileName="JeuCarte/Core/ListCards.cs" Line="6" Column="21" />
+      <File FileName="JeuCarte/Core/Card.cs" Line="16" Column="32" />
+      <File FileName="JeuCarte/MainActivity.cs" Line="75" Column="58" />
+      <File FileName="JeuCarte/Core/ListCards.cs" Line="44" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
