@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{04E663C0-9176-4E67-BF76-82DCE698D69A}|Default">
+  <MonoDevelop.Ide.ItemProperties.JeuCarteCorrection AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="JeuCarteCorrection/MainActivity.cs" Line="73" Column="32" />
+      <File FileName="JeuCarteCorrection/Core/Card.cs" Line="55" Column="58" />
+      <File FileName="JeuCarteCorrection/Core/Deck.cs" Line="71" Column="40" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

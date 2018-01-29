@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{CC0F1396-F047-4B50-87B9-C02A8B82F447}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Cours2/obj/Debug/lp/17/jl/res/values-v26/values-v26.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cours2/TodoActivity.cs">
     <Files>
       <File FileName="Cours2/TodoActivity.cs" Line="16" Column="36" />
-      <File FileName="Cours2/MainActivity.cs" Line="33" Column="53" />
+      <File FileName="Cours2/MainActivity.cs" Line="24" Column="47" />
       <File FileName="Cours2/Core/Todo.cs" Line="17" Column="54" />
       <File FileName="Cours2/Resources/values/Strings.xml" Line="10" Column="21" />
-      <File FileName="Cours2/FodyWeavers.xml" Line="3" Column="16" />
-      <File FileName="Cours2/Core/RealmDB.cs" Line="13" Column="29" />
       <File FileName="Cours2/obj/Debug/lp/17/jl/res/values-v26/values-v26.xml" Line="1" Column="1" />
+      <File FileName="Cours2/Resources/values/Colors.xml" Line="1" Column="1" />
+      <File FileName="Cours2/packages.config" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
