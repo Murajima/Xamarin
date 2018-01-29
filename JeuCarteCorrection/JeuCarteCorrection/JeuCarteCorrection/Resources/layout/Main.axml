@@ -26,6 +26,7 @@
         android:textColor="@android:color/background_dark"
         android:background="@drawable/dot" />
     <RelativeLayout
+        android:id="@+id/cardLayout"
         android:orientation="vertical"
         android:layout_width="200dp"
         android:layout_height="wrap_content"

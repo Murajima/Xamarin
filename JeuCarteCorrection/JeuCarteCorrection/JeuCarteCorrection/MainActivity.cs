@@ -24,6 +24,7 @@ namespace JeuCarteCorrection
         private TextView valueBottom;
         private ImageView color;
         private ImageView colorBottom;
+        private RelativeLayout cardLayout;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -39,6 +40,7 @@ namespace JeuCarteCorrection
             valueBottom = FindViewById<TextView>(Resource.Id.valeurBottom);
             color = FindViewById<ImageView>(Resource.Id.couleur);
             colorBottom = FindViewById<ImageView>(Resource.Id.couleurBottom);
+            cardLayout = FindViewById<RelativeLayout>(Resource.Id.cardLayout);
 
             Reset();
 
@@ -58,6 +60,7 @@ namespace JeuCarteCorrection
                     value.Text = selectedCard.value;
                     valueBottom.Text = selectedCard.value;
                     selectedCard.setCardColor(selectedCard.color, color, colorBottom);
+                    cardLayout.Visibility = Android.Views.ViewStates.Visible;
                 }
                 else
                 {
@@ -65,7 +68,8 @@ namespace JeuCarteCorrection
                     defausse.Text = defausseCpt.ToString();
                     value.Text = " ";
                     valueBottom.Text = " ";
-
+                    Toast.MakeText(this, "Pioche vide, melangez en appuyant sur Reset", ToastLength.Short).Show();
+                    cardLayout.Visibility = Android.Views.ViewStates.Invisible;
                     color.SetImageResource(Resource.Drawable.dot);
                     colorBottom.SetImageResource(Resource.Drawable.dot);
                     color.SetColorFilter(Color.Transparent);
@@ -92,6 +96,7 @@ namespace JeuCarteCorrection
             defausse.Text = defausseCpt.ToString();
             value.Text = " ";
             valueBottom.Text = " ";
+            cardLayout.Visibility = Android.Views.ViewStates.Invisible;
             color.SetImageResource(Resource.Drawable.dot);
             colorBottom.SetImageResource(Resource.Drawable.dot);
             color.SetColorFilter(Color.Transparent);
