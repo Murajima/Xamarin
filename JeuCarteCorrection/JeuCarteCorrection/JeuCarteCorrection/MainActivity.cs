@@ -15,7 +15,6 @@ namespace JeuCarteCorrection
 
         private Deck listCard;
         private Card selectedCard;
-
         private Button tirer;
         private Button reset;
         private TextView defausse;
@@ -53,8 +52,10 @@ namespace JeuCarteCorrection
                     selectedCard = listCard.getCard(index);
                     listCard.removeCard(index);
 
-                    piocheCpt -= 1;
-                    defausseCpt += 1;
+
+
+                    piocheCpt = listCard.listCards.Count;
+                    defausseCpt = listCard.defausseCards.Count;
                     pioche.Text = piocheCpt.ToString();
                     defausse.Text = defausseCpt.ToString();
                     value.Text = selectedCard.value;
@@ -70,10 +71,6 @@ namespace JeuCarteCorrection
                     valueBottom.Text = " ";
                     Toast.MakeText(this, "Pioche vide, melangez en appuyant sur Reset", ToastLength.Short).Show();
                     cardLayout.Visibility = Android.Views.ViewStates.Invisible;
-                    color.SetImageResource(Resource.Drawable.dot);
-                    colorBottom.SetImageResource(Resource.Drawable.dot);
-                    color.SetColorFilter(Color.Transparent);
-                    colorBottom.SetColorFilter(Color.Transparent);
                 }
 
             };
@@ -90,8 +87,8 @@ namespace JeuCarteCorrection
 
         public void Reset() {
             listCard = new Deck();
-            piocheCpt = 54;
-            defausseCpt = 0;
+            piocheCpt = listCard.listCards.Count;
+            defausseCpt = listCard.defausseCards.Count;
             pioche.Text = piocheCpt.ToString();
             defausse.Text = defausseCpt.ToString();
             value.Text = " ";

@@ -66,6 +66,10 @@ namespace JeuCarteCorrection.Core
             return listCards.ElementAt(index);
         }
 
+        public List<Card> getDefausse() {
+            return defausseCards;
+        }
+
         public void removeCard(int index)
         {
             Card tmpCard = new Card();
