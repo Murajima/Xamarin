@@ -1744,9 +1744,6 @@ namespace JeuCarteCorrection
 			// aapt resource value: 0x7f0b0013
 			public const int add = 2131427347;
 			
-			// aapt resource value: 0x7f0b0059
-			public const int ajouter = 2131427417;
-			
 			// aapt resource value: 0x7f0b003b
 			public const int alertTitle = 2131427387;
 			
@@ -1765,8 +1762,8 @@ namespace JeuCarteCorrection
 			// aapt resource value: 0x7f0b0065
 			public const int cancel_action = 2131427429;
 			
-			// aapt resource value: 0x7f0b005c
-			public const int cardLayout = 2131427420;
+			// aapt resource value: 0x7f0b005b
+			public const int cardLayout = 2131427419;
 			
 			// aapt resource value: 0x7f0b003e
 			public const int checkbox = 2131427390;
@@ -1783,8 +1780,8 @@ namespace JeuCarteCorrection
 			// aapt resource value: 0x7f0b0057
 			public const int couleur = 2131427415;
 			
-			// aapt resource value: 0x7f0b005f
-			public const int couleurBottom = 2131427423;
+			// aapt resource value: 0x7f0b005e
+			public const int couleurBottom = 2131427422;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int custom = 2131427384;
@@ -1798,8 +1795,11 @@ namespace JeuCarteCorrection
 			// aapt resource value: 0x7f0b002a
 			public const int default_activity_button = 2131427370;
 			
-			// aapt resource value: 0x7f0b005a
-			public const int defausse = 2131427418;
+			// aapt resource value: 0x7f0b0059
+			public const int defausse = 2131427417;
+			
+			// aapt resource value: 0x7f0b0060
+			public const int defausseBtn = 2131427424;
 			
 			// aapt resource value: 0x7f0b000c
 			public const int disableHome = 2131427340;
@@ -1885,8 +1885,8 @@ namespace JeuCarteCorrection
 			// aapt resource value: 0x7f0b0030
 			public const int parentPanel = 2131427376;
 			
-			// aapt resource value: 0x7f0b005b
-			public const int pile = 2131427419;
+			// aapt resource value: 0x7f0b005a
+			public const int pile = 2131427418;
 			
 			// aapt resource value: 0x7f0b0005
 			public const int progress_circular = 2131427333;
@@ -1897,8 +1897,8 @@ namespace JeuCarteCorrection
 			// aapt resource value: 0x7f0b0040
 			public const int radio = 2131427392;
 			
-			// aapt resource value: 0x7f0b0060
-			public const int reset = 2131427424;
+			// aapt resource value: 0x7f0b005f
+			public const int reset = 2131427423;
 			
 			// aapt resource value: 0x7f0b006f
 			public const int right_icon = 2131427439;
@@ -2005,8 +2005,8 @@ namespace JeuCarteCorrection
 			// aapt resource value: 0x7f0b006c
 			public const int time = 2131427436;
 			
-			// aapt resource value: 0x7f0b005d
-			public const int tirer = 2131427421;
+			// aapt resource value: 0x7f0b005c
+			public const int tirer = 2131427420;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int title = 2131427373;
@@ -2032,8 +2032,8 @@ namespace JeuCarteCorrection
 			// aapt resource value: 0x7f0b0056
 			public const int valeur = 2131427414;
 			
-			// aapt resource value: 0x7f0b005e
-			public const int valeurBottom = 2131427422;
+			// aapt resource value: 0x7f0b005d
+			public const int valeurBottom = 2131427421;
 			
 			// aapt resource value: 0x7f0b0021
 			public const int withText = 2131427361;

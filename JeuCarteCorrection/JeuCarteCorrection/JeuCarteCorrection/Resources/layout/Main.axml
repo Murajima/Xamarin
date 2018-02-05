@@ -89,7 +89,7 @@
         android:layout_above="@id/reset"
         android:text="Tirer" />
     <Button
-        android:id="@+id/defausse"
+        android:id="@+id/defausseBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/tirer"

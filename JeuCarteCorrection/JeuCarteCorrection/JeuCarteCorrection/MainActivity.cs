@@ -37,7 +37,7 @@ namespace JeuCarteCorrection
 
             tirer = FindViewById<Button>(Resource.Id.tirer);
             reset = FindViewById<Button>(Resource.Id.reset);
-            defausseBtn = FindViewById<Button>(Resource.Id.defausse);
+            defausseBtn = FindViewById<Button>(Resource.Id.defausseBtn);
             defausse = FindViewById<TextView>(Resource.Id.defausse);
             pioche = FindViewById<TextView>(Resource.Id.pile);
             value = FindViewById<TextView>(Resource.Id.valeur);
