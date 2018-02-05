@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{438DCC50-1131-4E25-82F2-B601D3934D9F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ApiCall2/Resources/values/Strings.xml">
+    <Files>
+      <File FileName="ApiCall2/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="ApiCall2/Resources/values/Strings.xml" Line="3" Column="38" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ApiCall2 AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

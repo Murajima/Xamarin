@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/labelEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrez un nom de Ville: " />
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelEdit" />
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:text="@string/hello" />
+    <TextView
+        android:id="@+id/weather"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myButton"
+        android:text="Entrez un nom de Ville: " />
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weather"
+        android:text="Entrez un nom de Ville: " />
+    <TextView
+        android:id="@+id/windspeed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temperature"
+        android:text="Entrez un nom de Ville: " />
+</RelativeLayout>

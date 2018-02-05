@@ -20,7 +20,6 @@ namespace JeuCarteCorrection
         private Card selectedCard;
         private Button tirer;
         private Button reset;
-        private Button defausseBtn;
         private TextView defausse;
         private TextView pioche;
         private TextView value;
@@ -37,7 +36,6 @@ namespace JeuCarteCorrection
 
             tirer = FindViewById<Button>(Resource.Id.tirer);
             reset = FindViewById<Button>(Resource.Id.reset);
-            defausseBtn = FindViewById<Button>(Resource.Id.defausseBtn);
             defausse = FindViewById<TextView>(Resource.Id.defausse);
             pioche = FindViewById<TextView>(Resource.Id.pile);
             value = FindViewById<TextView>(Resource.Id.valeur);
@@ -84,10 +82,18 @@ namespace JeuCarteCorrection
                 Reset();
             };
 
-            defausseBtn.Click += delegate {
+            defausse.Click += delegate {
                 Intent intent = new Intent(this, typeof(CardListActivity));
                 Bundle extras = new Bundle();
                 extras.PutString("cards", JsonConvert.SerializeObject(listCard.defausseCards));
+                intent.PutExtras(extras);
+                StartActivity(intent);
+            };
+
+            pioche.Click += delegate {
+                Intent intent = new Intent(this, typeof(CardListActivity));
+                Bundle extras = new Bundle();
+                extras.PutString("cards", JsonConvert.SerializeObject(listCard.listCards));
                 intent.PutExtras(extras);
                 StartActivity(intent);
             };
