@@ -84,6 +84,7 @@
     <Compile Include="Core\Card.cs" />
     <Compile Include="Core\Deck.cs" />
     <Compile Include="UI\CardListActivity.cs" />
+    <Compile Include="UI\CardAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -106,6 +107,7 @@
     <AndroidResource Include="Resources\drawable\heart.png" />
     <AndroidResource Include="Resources\drawable\spades.png" />
     <AndroidResource Include="Resources\layout\CardListActivity.axml" />
+    <AndroidResource Include="Resources\layout\CardAdapter.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
