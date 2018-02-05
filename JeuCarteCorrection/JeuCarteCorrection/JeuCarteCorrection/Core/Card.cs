@@ -56,32 +56,5 @@ namespace JeuCarteCorrection.Core
                     break;
             }
         }
-        public void SetCardColorDef(string color, ImageView iv)
-        {
-            switch (color)
-            {
-                case "Carreau":
-                    iv.SetImageResource(Resource.Drawable.diamond);
-                    iv.SetColorFilter(Color.Red);
-                    break;
-                case "Coeur":
-                    iv.SetImageResource(Resource.Drawable.heart);
-                    iv.SetColorFilter(Color.Red);
-                    break;
-                case "Pique":
-                    iv.SetImageResource(Resource.Drawable.spades);
-                    iv.SetColorFilter(Color.Black);
-                    break;
-                case "Trefle":
-                    iv.SetImageResource(Resource.Drawable.clover);
-                    iv.SetColorFilter(Color.Black);
-                    break;
-
-                default:
-                    iv.SetImageResource(Resource.Drawable.dot);
-                    iv.SetColorFilter(Color.Transparent);
-                    break;
-            }
-        }
     }
 }
