@@ -24,10 +24,12 @@ namespace JeuCarteCorrection.UI
 
             Card currentItem = GetItem(position);
             TextView valeur = convertView.FindViewById<TextView>(Resource.Id.valeur);
-            TextView couleur = convertView.FindViewById<TextView>(Resource.Id.couleur);
+            // TextView couleur = convertView.FindViewById<TextView>(Resource.Id.couleur);
+            ImageView color = convertView.FindViewById<ImageView>(Resource.Id.couleurImg);
 
             valeur.Text = currentItem.value;
-            couleur.Text = currentItem.color;
+            // couleur.Text = currentItem.color;
+            currentItem.SetCardColorDef(currentItem.color, color);
 
             return convertView;
         }

@@ -1,12 +1,10 @@
 ﻿<Properties StartupConfiguration="{04E663C0-9176-4E67-BF76-82DCE698D69A}|Default">
   <MonoDevelop.Ide.ItemProperties.JeuCarteCorrection AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="JeuCarteCorrection/Core/Card.cs">
     <Files>
-      <File FileName="JeuCarteCorrection/MainActivity.cs" Line="92" Column="30" />
-      <File FileName="JeuCarteCorrection/Core/Card.cs" Line="55" Column="59" />
-      <File FileName="JeuCarteCorrection/Core/Deck.cs" Line="69" Column="38" />
-      <File FileName="JeuCarteCorrection/UI/CardListActivity.cs" Line="35" Column="35" />
-      <File FileName="JeuCarteCorrection/UI/CardAdapter.cs" Line="28" Column="1" />
+      <File FileName="JeuCarteCorrection/UI/CardAdapter.cs" Line="32" Column="57" />
+      <File FileName="JeuCarteCorrection/MainActivity.cs" Line="45" Column="66" />
+      <File FileName="JeuCarteCorrection/Core/Card.cs" Line="23" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

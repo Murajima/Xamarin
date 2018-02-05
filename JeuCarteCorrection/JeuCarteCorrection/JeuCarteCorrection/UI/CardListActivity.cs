@@ -20,22 +20,20 @@ namespace JeuCarteCorrection.UI
     {
         private CardAdapter adapter;
         private ListView listView;
-        private List<Card> cardsList;
-        private string value, color;
+        private List<Card> cardsList = new List<Card>();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            string json = Intent.GetStringExtra("cards");
-            listView = FindViewById<ListView>(Resource.Id.listView);
-            cardsList = JsonConvert.DeserializeObject<List<Card>>(json);
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.CardListActivity);
 
+            string json = Intent.GetStringExtra("cards");
+            cardsList = JsonConvert.DeserializeObject<List<Card>>(json);
+
+            listView = FindViewById<ListView>(Resource.Id.listView);
+
             adapter = new CardAdapter(this, cardsList);
             listView.Adapter = adapter;
-
-
-
             // Create your application here
         }
     }
