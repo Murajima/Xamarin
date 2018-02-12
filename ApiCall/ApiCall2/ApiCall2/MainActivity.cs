@@ -160,8 +160,8 @@ namespace ApiCall2
             ImageService.Instance.LoadUrl(ville.image).Into(weatherImg);
 
             temperatureAct.Text = ville.temp + "° C";
-            temperatureMin.Text = ville.tmpMin + "° C";
-            temperatureMax.Text = ville.tmpMax + "° C";
+            temperatureMin.Text = "Min: " + ville.tmpMin + "° C";
+            temperatureMax.Text = "Max: " + ville.tmpMax + "° C";
 
             wind.Text = ville.windspeed + " km/h ";
         }

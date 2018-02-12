@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{438DCC50-1131-4E25-82F2-B601D3934D9F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ApiCall2/Core/Ville.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ApiCall2/MainActivity.cs">
     <Files>
-      <File FileName="ApiCall2/MainActivity.cs" Line="53" Column="6" />
-      <File FileName="ApiCall2/Core/Ville.cs" Line="1" Column="1" />
+      <File FileName="ApiCall2/MainActivity.cs" Line="168" Column="6" />
+      <File FileName="ApiCall2/Core/Ville.cs" Line="10" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ApiCall2 AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
