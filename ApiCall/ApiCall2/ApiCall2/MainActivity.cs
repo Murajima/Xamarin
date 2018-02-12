@@ -10,6 +10,9 @@ using System.Net;
 using System.IO;
 using FFImageLoading;
 using FFImageLoading.Views;
+using Realms;
+using ApiCall2.Core;
+using System.Linq;
 
 namespace ApiCall2
 {
@@ -24,16 +27,23 @@ namespace ApiCall2
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-
+            DisplayRealm();
             etVille = FindViewById<EditText>(Resource.Id.editText);
             button = FindViewById<Button>(Resource.Id.myButton);
 
+
+
             button.Click += async (sender, e) =>
             {
+                if (etVille.Text == "")
+                {
+                    etVille.Text = "London";
+                }
+
                 string URL = "http://api.openweathermap.org/data/2.5/weather?q=" + etVille.Text + "&APPID=8754001be4624878ec1c248f4d18e261";
 
                 JsonValue json = await FetchWeatherAsync(URL);
-                ParseAndDisplay(json);
+                ParseAndDisplay(json, etVille.Text);
             };
         }
 
@@ -60,8 +70,13 @@ namespace ApiCall2
             }
         }
 
-        private void ParseAndDisplay(JsonValue json)
+        // Fonction de récupération et d'affichage des données de l'api
+        private void ParseAndDisplay(JsonValue json, string Ville)
         {
+            var config = RealmConfiguration.DefaultConfiguration;
+            config.SchemaVersion = 2;
+            var realm = Realm.GetInstance();
+
             // Get the weather reporting fields from the layout resource:
             TextView weatherLabel = FindViewById<TextView>(Resource.Id.weatherLabel);
             TextView weatherDetail = FindViewById<TextView>(Resource.Id.weatherDetail);
@@ -99,6 +114,56 @@ namespace ApiCall2
             string cloudy = windResults["speed"].ToString();
             wind.Text = cloudy + " km/h ";
 
+            var key = realm.All<Ville>();
+            int id = key.AsRealmCollection().Count + 1;
+
+            realm.Write(() =>
+            {
+                realm.Add(new Ville {
+                    Id = id,
+                    nom = Ville,
+                    weather = weatherResults["main"].ToString(),
+                    weatherDetail = weatherResults["description"].ToString(),
+                    image = URL,
+                    temp = String.Format("{0:F1}", temp),
+                    tmpMin = String.Format("{0:F1}", tempMin),
+                    tmpMax = String.Format("{0:F1}", tempMax),
+                    windspeed = windResults["speed"].ToString()
+                });
+            });
+
+
+        }
+
+        private void DisplayRealm () {
+            var config = RealmConfiguration.DefaultConfiguration;
+            config.SchemaVersion = 2;
+            var realm = Realm.GetInstance();
+
+            var ville = realm.All<Ville>().OrderByDescending(v => v.Id).First();
+
+            etVille = FindViewById<EditText>(Resource.Id.editText);
+
+            TextView weatherLabel = FindViewById<TextView>(Resource.Id.weatherLabel);
+            TextView weatherDetail = FindViewById<TextView>(Resource.Id.weatherDetail);
+            ImageViewAsync weatherImg = FindViewById<ImageViewAsync>(Resource.Id.weatherImg);
+
+            TextView temperatureAct = FindViewById<TextView>(Resource.Id.temperatureAct);
+            TextView temperatureMin = FindViewById<TextView>(Resource.Id.temperatureMin);
+            TextView temperatureMax = FindViewById<TextView>(Resource.Id.temperatureMax);
+
+            TextView wind = FindViewById<TextView>(Resource.Id.windspeedText);
+
+            etVille.Text = ville.nom;
+            weatherLabel.Text = ville.weather;
+            weatherDetail.Text = ville.weatherDetail;
+            ImageService.Instance.LoadUrl(ville.image).Into(weatherImg);
+
+            temperatureAct.Text = ville.temp + "° C";
+            temperatureMin.Text = ville.tmpMin + "° C";
+            temperatureMax.Text = ville.tmpMax + "° C";
+
+            wind.Text = ville.windspeed + " km/h ";
         }
     }
 }
