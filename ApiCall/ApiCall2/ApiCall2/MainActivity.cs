@@ -8,6 +8,8 @@ using System;
 using System.Json;
 using System.Net;
 using System.IO;
+using FFImageLoading;
+using FFImageLoading.Views;
 
 namespace ApiCall2
 {
@@ -26,8 +28,9 @@ namespace ApiCall2
             etVille = FindViewById<EditText>(Resource.Id.editText);
             button = FindViewById<Button>(Resource.Id.myButton);
 
-            button.Click += async (sender, e) => {
-                string URL = "http://api.openweathermap.org/data/2.5/weather?q=" + etVille.Text + "&APPID=8754001be4624878ec1c248f4d18e261"; 
+            button.Click += async (sender, e) =>
+            {
+                string URL = "http://api.openweathermap.org/data/2.5/weather?q=" + etVille.Text + "&APPID=8754001be4624878ec1c248f4d18e261";
 
                 JsonValue json = await FetchWeatherAsync(URL);
                 ParseAndDisplay(json);
@@ -60,9 +63,15 @@ namespace ApiCall2
         private void ParseAndDisplay(JsonValue json)
         {
             // Get the weather reporting fields from the layout resource:
-            TextView weather = FindViewById<TextView>(Resource.Id.weather);
-            TextView temperature = FindViewById<TextView>(Resource.Id.temperature);
-            TextView wind = FindViewById<TextView>(Resource.Id.windspeed);
+            TextView weatherLabel = FindViewById<TextView>(Resource.Id.weatherLabel);
+            TextView weatherDetail = FindViewById<TextView>(Resource.Id.weatherDetail);
+            ImageViewAsync weatherImg = FindViewById<ImageViewAsync>(Resource.Id.weatherImg);
+
+            TextView temperatureAct = FindViewById<TextView>(Resource.Id.temperatureAct);
+            TextView temperatureMin = FindViewById<TextView>(Resource.Id.temperatureMin);
+            TextView temperatureMax = FindViewById<TextView>(Resource.Id.temperatureMax);
+
+            TextView wind = FindViewById<TextView>(Resource.Id.windspeedText);
 
             // Extract the array of name/value results for the field name "weatherObservation". 
             JsonValue weatherResults = json["weather"][0];
@@ -70,21 +79,26 @@ namespace ApiCall2
             JsonValue windResults = json["wind"];
 
             // Extract the "stationName" (location string) and write it to the location TextBox:
-            weather.Text = weatherResults["description"].ToString();
+            weatherLabel.Text = weatherResults["main"].ToString();
+            weatherDetail.Text = weatherResults["description"].ToString();
 
+            string URL = "http://openweathermap.org/img/w/" + weatherResults["icon"] + ".png";
+            ImageService.Instance.LoadUrl(URL).Into(weatherImg);
             // The temperature is expressed in Celsius:
             double temp = Convert.ToDouble(temperatureResults["temp"].ToString()) - 273.15;
+            double tempMin = Convert.ToDouble(temperatureResults["temp_min"].ToString()) - 273.15;
+            double tempMax = Convert.ToDouble(temperatureResults["temp_max"].ToString()) - 273.15;
 
             // Write the temperature (one decimal place) to the temperature TextBox:
-            temperature.Text = String.Format("{0:F1}", temp) + "° C";
+            temperatureAct.Text = String.Format("{0:F1}", temp) + "° C";
+            temperatureMin.Text = "Min: " + String.Format("{0:F1}", tempMin) + "° C";
+            temperatureMax.Text = "Max: " + String.Format("{0:F1}", tempMax) + "° C";
 
             // Get the "clouds" and "weatherConditions" strings and 
             // combine them. Ignore strings that are reported as "n/a":
             string cloudy = windResults["speed"].ToString();
-
-
-            // Write the result to the conditions TextBox:
             wind.Text = cloudy + " km/h ";
+
         }
     }
 }
