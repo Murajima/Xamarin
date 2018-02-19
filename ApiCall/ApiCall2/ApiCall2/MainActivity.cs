@@ -13,6 +13,8 @@ using FFImageLoading.Views;
 using Realms;
 using ApiCall2.Core;
 using System.Linq;
+using ApiCall2.UI;
+using Android.Content;
 
 namespace ApiCall2
 {
@@ -21,6 +23,7 @@ namespace ApiCall2
     {
         private EditText etVille;
         private Button button;
+        private Button history;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -30,8 +33,12 @@ namespace ApiCall2
             DisplayRealm();
             etVille = FindViewById<EditText>(Resource.Id.editText);
             button = FindViewById<Button>(Resource.Id.myButton);
+            history = FindViewById<Button>(Resource.Id.BtnHistorique);
 
-
+            history.Click += delegate {
+                Intent intent = new Intent(this, typeof(HistoryActivity));
+                StartActivity(intent);
+            };
 
             button.Click += async (sender, e) =>
             {
