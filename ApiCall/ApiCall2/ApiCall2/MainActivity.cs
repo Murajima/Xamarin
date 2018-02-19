@@ -50,7 +50,12 @@ namespace ApiCall2
                 string URL = "http://api.openweathermap.org/data/2.5/weather?q=" + etVille.Text + "&APPID=8754001be4624878ec1c248f4d18e261";
 
                 JsonValue json = await FetchWeatherAsync(URL);
-                ParseAndDisplay(json, etVille.Text);
+                if (json == null){
+                    DisplayRealm();
+                } else {
+                    ParseAndDisplay(json, etVille.Text);
+                }
+
             };
         }
 
@@ -60,21 +65,25 @@ namespace ApiCall2
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
             request.ContentType = "application/json";
             request.Method = "GET";
-
-            // Send the request to the server and wait for the response:
-            using (WebResponse response = await request.GetResponseAsync())
-            {
-                // Get a stream representation of the HTTP web response:
-                using (Stream stream = response.GetResponseStream())
+            try {
+                // Send the request to the server and wait for the response:
+                using (WebResponse response = await request.GetResponseAsync())
                 {
-                    // Use this stream to build a JSON document object:
-                    JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
-                    Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
+                    // Get a stream representation of the HTTP web response:
+                    using (Stream stream = response.GetResponseStream())
+                    {
+                        // Use this stream to build a JSON document object:
+                        JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
+                        Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
 
-                    // Return the JSON document:
-                    return jsonDoc;
+                        // Return the JSON document:
+                        return jsonDoc;
+                    }
                 }
+            } catch (Exception e) {
+                return null;
             }
+
         }
 
         // Fonction de récupération et d'affichage des données de l'api
@@ -112,9 +121,9 @@ namespace ApiCall2
             double tempMax = Convert.ToDouble(temperatureResults["temp_max"].ToString()) - 273.15;
 
             // Write the temperature (one decimal place) to the temperature TextBox:
-            temperatureAct.Text = String.Format("{0:F1}", temp) + "° C";
-            temperatureMin.Text = "Min: " + String.Format("{0:F1}", tempMin) + "° C";
-            temperatureMax.Text = "Max: " + String.Format("{0:F1}", tempMax) + "° C";
+            temperatureAct.Text = String.Format("{0:F1}", temp) + "°C";
+            temperatureMin.Text = "Min: " + String.Format("{0:F1}", tempMin) + "°C";
+            temperatureMax.Text = "Max: " + String.Format("{0:F1}", tempMax) + "°C";
 
             // Get the "clouds" and "weatherConditions" strings and 
             // combine them. Ignore strings that are reported as "n/a":
@@ -147,30 +156,35 @@ namespace ApiCall2
             config.SchemaVersion = 2;
             var realm = Realm.GetInstance();
 
-            var ville = realm.All<Ville>().OrderByDescending(v => v.Id).First();
+            try {
+                var ville = realm.All<Ville>().OrderByDescending(v => v.Id).First();
 
-            etVille = FindViewById<EditText>(Resource.Id.editText);
+                etVille = FindViewById<EditText>(Resource.Id.editText);
 
-            TextView weatherLabel = FindViewById<TextView>(Resource.Id.weatherLabel);
-            TextView weatherDetail = FindViewById<TextView>(Resource.Id.weatherDetail);
-            ImageViewAsync weatherImg = FindViewById<ImageViewAsync>(Resource.Id.weatherImg);
+                TextView weatherLabel = FindViewById<TextView>(Resource.Id.weatherLabel);
+                TextView weatherDetail = FindViewById<TextView>(Resource.Id.weatherDetail);
+                ImageViewAsync weatherImg = FindViewById<ImageViewAsync>(Resource.Id.weatherImg);
 
-            TextView temperatureAct = FindViewById<TextView>(Resource.Id.temperatureAct);
-            TextView temperatureMin = FindViewById<TextView>(Resource.Id.temperatureMin);
-            TextView temperatureMax = FindViewById<TextView>(Resource.Id.temperatureMax);
+                TextView temperatureAct = FindViewById<TextView>(Resource.Id.temperatureAct);
+                TextView temperatureMin = FindViewById<TextView>(Resource.Id.temperatureMin);
+                TextView temperatureMax = FindViewById<TextView>(Resource.Id.temperatureMax);
 
-            TextView wind = FindViewById<TextView>(Resource.Id.windspeedText);
+                TextView wind = FindViewById<TextView>(Resource.Id.windspeedText);
 
-            etVille.Text = ville.nom;
-            weatherLabel.Text = ville.weather;
-            weatherDetail.Text = ville.weatherDetail;
-            ImageService.Instance.LoadUrl(ville.image).Into(weatherImg);
+                etVille.Text = ville.nom;
+                weatherLabel.Text = ville.weather;
+                weatherDetail.Text = ville.weatherDetail;
+                ImageService.Instance.LoadUrl(ville.image).Into(weatherImg);
 
-            temperatureAct.Text = ville.temp + "° C";
-            temperatureMin.Text = "Min: " + ville.tmpMin + "° C";
-            temperatureMax.Text = "Max: " + ville.tmpMax + "° C";
+                temperatureAct.Text = ville.temp + "°C";
+                temperatureMin.Text = "Min: " + ville.tmpMin + "°C";
+                temperatureMax.Text = "Max: " + ville.tmpMax + "°C";
 
-            wind.Text = ville.windspeed + " km/h ";
+                wind.Text = ville.windspeed + " km/h ";
+            } catch (Exception e) {
+                
+            }
+
         }
     }
 }
