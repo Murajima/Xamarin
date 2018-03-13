@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+        <TextView
+            android:id="@+id/labelEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrez un nom de Ville: " />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelEdit" />
+        <Button
+            android:id="@+id/myButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText"
+            android:text="@string/hello" />
+        <TextView
+            android:id="@+id/weather"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myButton"
+            android:text="Météo :" />
+        <TextView
+            android:id="@+id/weatherLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weather" />
+        <TextView
+            android:id="@+id/weatherDetail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weatherLabel" />
+        <FFImageLoading.Views.ImageViewAsync
+            android:id="@+id/weatherImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/weather"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="80dp" />
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weatherDetail"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:text="Temperature : " />
+        <TextView
+            android:id="@+id/temperatureAct"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temperature"
+            android:textSize="30dp" />
+        <TextView
+            android:id="@+id/temperatureMax"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/temperature"
+            android:layout_below="@id/temperature"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:id="@+id/temperatureMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/temperature"
+            android:layout_below="@id/temperatureMax"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:id="@+id/windspeed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temperatureMin"
+            android:layout_marginTop="10dp"
+            android:text="Vitesse du vent:" />
+        <TextView
+            android:id="@+id/windspeedText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/windspeed" />
+        <Button
+            android:id="@+id/BtnHistorique"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/windspeedText"
+            android:layout_marginTop="10dp"
+            android:text="Historique" />
+    </RelativeLayout>
+</ScrollView>
